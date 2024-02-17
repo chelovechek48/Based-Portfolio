@@ -56,7 +56,7 @@ module.exports = {
         use: [...cssLoaders, 'sass-loader'],
       },
       {
-        test: /\.(svg|avif|webp|png|jpg)$/,
+        test: /\.(svg|avif|webp|png|jpg|pdf)$/,
         type: 'asset/resource',
       },
       {
