@@ -1,0 +1,65 @@
+@use '../vars/' as *;
+@use '../mixins/' as *;
+
+.skills {
+  color: $black;
+  background-color: $white;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    gap: clamp(1.5rem, 4vw, 3rem) clamp(1.5rem, 4vw, 4rem);
+  }
+
+  &__item {
+    @include focus(
+      $offset: 0.5rem
+    );
+    &:hover {
+      color: $white;
+      background-color: $black;
+    }
+    box-shadow: 0 0 0 2px $black;
+    border-radius: 4px;
+    padding: clamp(0.75rem, 3vw, 1.75rem);
+    @media (min-width: calc($laptop + 1px)) {
+      aspect-ratio: 1;
+    }
+
+    display: flex;
+    gap: clamp(1rem, 3vw, 2rem);
+    align-items: center;
+
+    @media (min-width: calc($mobile-small + 1px)) {
+      flex-direction: column;
+      justify-content: center;
+    }
+    @media (max-width: $mobile-small) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__image {
+    width: clamp(2.5rem, 10vw, 3.5rem);
+    height: clamp(2.5rem, 10vw, 3.5rem);
+  }
+  &__item:hover &__image {
+    transform: scale(1.25);
+    &_detail {
+      fill: $black;
+    }
+  }
+  &__item, &__image_detail {
+    transition: 200ms ease;
+  }
+  &__image {
+    transition: transform 300ms ease;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+    word-break: break-word;
+  }
+}

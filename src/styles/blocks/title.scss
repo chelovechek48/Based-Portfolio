@@ -33,4 +33,9 @@
       font-size: 3rem;
     }
   }
+
+  &_section {
+    text-align: center;
+    padding-bottom: clamp(1.5rem, 5vw, 4rem);
+  }
 }
