@@ -1,0 +1,81 @@
+@use '../vars/' as *;
+@use '../mixins/' as *;
+
+.hero {
+  color: $black;
+  background-color: $white;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    row-gap: clamp(1rem, 3vw, 2rem);
+    padding-block: clamp(1.5rem, 5vw, 4rem);
+  }
+
+  &__content {
+    z-index: 2;
+    flex: 1 1 35rem;
+    max-width: 800px;
+
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 3vw, 2rem);
+  }
+
+  &__socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(1.5rem, 5vw, 2rem);
+    &-link {
+      aspect-ratio: 1;
+      display: grid;
+      justify-items: center;
+
+      padding: clamp(0.75rem, 1.5vw, 1rem);
+      box-shadow: 0 0 0 2px $black;
+      border-radius: 4px;
+      
+      color: $black;
+      background-color: $white;
+      transition: 200ms ease;
+      
+      &:hover {
+        color: $white;
+        background-color: $black;
+      }
+      @include focus(
+        $offset: 0.5rem
+      );
+    }
+
+    &-image {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+  }
+
+  &__image {
+    &-wrapper {
+      flex: 0 1 35rem;
+    }
+    
+    z-index: 1;
+    height: 100%;
+    object-fit: contain;
+
+    @media (min-width: calc($laptop + 1px)) {
+      $margin: 10rem;
+      margin-left: calc(0px - $margin);
+      width: calc(100% + $margin);
+    }
+    @media (max-width: $laptop) {
+      width: 100%;
+    }
+    @media (max-width: $mobile-small) {
+      width: 115vw;
+      margin-left: -15vw;
+    }
+  }
+}

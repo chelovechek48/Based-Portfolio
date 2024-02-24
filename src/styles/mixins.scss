@@ -1,0 +1,16 @@
+@use './vars/' as *;
+
+@mixin focus(
+  $offset: 0.5rem,
+  $width: 0.25rem
+  ) {
+
+  outline-color: transparent;
+  &:focus-visible {
+    transition: outline-color 100ms;
+    outline-offset: $offset;
+    outline-width: $width;
+    outline-color: $blue;
+    outline-style: solid;
+  }
+}

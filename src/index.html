@@ -9,42 +9,53 @@
 <body>
   <header class="header">
     <div class="header__container container">
-      <a class="header__logo" href="">
+      <a class="header__logo clickable"
+        href=""
+        aria-label="открыть главную страницу сайта">
         <svg class="header__logo-image"
-          width="24" height="36"
           viewBox="0 0 24 36"
           fill="none">
           <path fill="currentColor" d="M23.53 12.212c0 4.67-2.768 8.696-6.75 10.523A7.577 7.577 0 0 0 12.112 9.32c-.056-.003-.105-.003-.16-.003-.055 0-.104 0-.16.003a2.894 2.894 0 0 0-2.734 2.89v14.471a8.685 8.685 0 0 1-8.683 8.683V12.212C.376 5.819 5.56.635 11.953.635c6.392 0 11.576 5.184 11.576 11.577Z"/>
           <path fill="currentColor" d="M14 14.258a2.894 2.894 0 1 0-4.094-4.093A2.894 2.894 0 0 0 14 14.258Z"/>
         </svg>
-        Personal
+        Portfolio
       </a>
-      <nav>
+      <nav class="header__navigation">
         <ul class="header__menu">
-          <li><a class="header__link" href="">
+          <li><a class="header__link clickable"
+            href="#about"
+            aria-label="узнать обо мне подробнее">
             About Me
           </a></li>
-          <li><a class="header__link" href="">
+          <li><a class="header__link clickable"
+            href="#skills"
+            aria-label="изучить мои навыки">
             Skills
           </a></li>
-          <li><a class="header__link" href="">
+          <li><a class="header__link clickable"
+            href="#projects"
+            aria-label="перейти к моим проектам">
             Project
           </a></li>
-          <li><a class="header__link" href="">
+          <li><a class="header__link clickable"
+            href="#contacts"
+            aria-label="перейти к моим контактам">
             Contact me
           </a></li>
         </ul>
       </nav>
-      <a class="header__download button" href="assets/pdf/resume.pdf" download>
+      <a class="header__download button"
+        href="assets/pdf/resume.pdf"
+        aria-label="скачать моё резюме в формате PDF"
+        download>
         Resume
-        <svg class="header__download__image"
-          width="18" height="18"
+        <svg class="button__image"
           viewBox="0 0 18 18"
           fill="none">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.5 11.5v1c0 1.4 0 2.1-.27 2.63a2.5 2.5 0 0 1-1.1 1.1c-.53.27-1.23.27-2.63.27h-7c-1.4 0-2.1 0-2.63-.27a2.5 2.5 0 0 1-1.1-1.1c-.27-.53-.27-1.23-.27-2.63v-1m11.67-4.17L9 11.5m0 0L4.83 7.33M9 11.5v-10"/>
         </svg>
       </a>
-      <button class="header__burger button">
+      <button class="header__burger clickable">
         <span class="header__burger-item"></span>
         <span class="header__burger-item"></span>
         <span class="header__burger-item"></span>
@@ -56,14 +67,20 @@
       <div class="hero__content">
         <h1 class="title title_size_large">
           Hello I’am
-          <span class="title_style_black">
+          <span class="title_style_bold">
             Evren Shah. Frontend
           </span>
-          <span class="title_style_outline">
+          <span class="title_style_outline-wrapper">
             Developer
+            <svg class="title_style_outline"
+              viewBox="0 0 262 64">
+              <text x="0" y="48">
+                Developer
+              </text>
+            </svg>
           </span>
           Based In
-          <span class="title_style_black">
+          <span class="title_style_bold">
             India.
           </span>
         </h1>
@@ -71,7 +88,27 @@
           I'm Evren Shah Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to specimen book.
         </p>
         <address class="hero__socials">
-          <a class="hero__socials-link" href="">
+          <a class="hero__socials-link"
+            href=""
+            aria-label="открыть мою страницу в facebook">
+            <svg class="hero__socials-image"
+              viewBox="0 0 20 20"
+              fill="none">
+              <path fill="currentColor" d="M20 10a10 10 0 1 0-11.56 9.88v-6.99H5.9V10h2.54V7.8c0-2.5 1.49-3.9 3.77-3.9 1.1 0 2.24.2 2.24.2v2.46H13.2c-1.24 0-1.63.77-1.63 1.57V10h2.78l-.45 2.9h-2.33v6.98A10 10 0 0 0 20 10Z"/>
+            </svg>
+          </a>
+          <a class="hero__socials-link"
+            href=""
+            aria-label="открыть мою страницу на Reddit">
+            <svg class="hero__socials-image"
+              viewBox="0 0 20 20"
+              fill="none">
+              <path fill="currentColor" fill-rule="evenodd" d="M20 10a10 10 0 1 1-20 0 10 10 0 0 1 20 0Zm-4.8-1.46c.81 0 1.47.65 1.47 1.46 0 .6-.37 1.11-.85 1.35.03.14.04.28.04.43 0 2.24-2.6 4.06-5.84 4.06-3.22 0-5.83-1.82-5.83-4.06 0-.15 0-.3.03-.45a1.46 1.46 0 1 1 1.6-2.39c1.01-.73 2.4-1.19 3.96-1.23l.73-3.49a.28.28 0 0 1 .12-.16.3.3 0 0 1 .2-.04l2.42.52c.17-.35.52-.59.93-.59a1.04 1.04 0 0 1 0 2.09c-.57 0-1.02-.45-1.05-1l-2.16-.46-.67 3.13c1.52.06 2.9.52 3.9 1.24.26-.26.6-.41 1-.41ZM7.7 10a1.04 1.04 0 0 0 0 2.08 1.04 1.04 0 0 0 0-2.08Zm2.31 4.55c.4 0 1.76-.05 2.47-.76.1-.1.1-.27.02-.39a.28.28 0 0 0-.38 0c-.46.45-1.4.61-2.1.61-.69 0-1.65-.16-2.09-.6a.28.28 0 0 0-.39 0c-.1.1-.1.27 0 .38.7.7 2.07.76 2.47.76Zm1.24-3.5a1.04 1.04 0 0 0 2.08 0 1.04 1.04 0 0 0-2.08 0Z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <a class="hero__socials-link"
+            href=""
+            aria-label="открыть мою страницу в Twitter">
             <svg class="hero__socials-image"
               width="20" height="18"
               viewBox="0 0 20 18"
@@ -79,40 +116,50 @@
               <path fill="currentColor" d="M6.3 17.13c7.54 0 11.67-6.26 11.67-11.68 0-.17 0-.35-.02-.53.8-.58 1.5-1.3 2.05-2.12-.75.33-1.54.55-2.36.64a4.13 4.13 0 0 0 1.8-2.27c-.8.48-1.68.82-2.6 1A4.1 4.1 0 0 0 9.85 5.9a11.65 11.65 0 0 1-8.46-4.29A4.1 4.1 0 0 0 2.66 7.1 4.1 4.1 0 0 1 .8 6.59v.05a4.1 4.1 0 0 0 3.3 4.02c-.6.17-1.24.2-1.85.07a4.11 4.11 0 0 0 3.83 2.85A8.23 8.23 0 0 1 0 15.28a11.64 11.64 0 0 0 6.3 1.85Z"/>
             </svg>
           </a>
-          <a class="hero__socials-link" href="">
+          <a class="hero__socials-link"
+            href=""
+            aria-label="найти меня в Discord">
             <svg class="hero__socials-image"
-              width="20" height="18"
-              viewBox="0 0 20 18"
+              viewBox="0 0 18 20"
               fill="none">
-              <path fill="currentColor" d="M6.3 17.13c7.54 0 11.67-6.26 11.67-11.68 0-.17 0-.35-.02-.53.8-.58 1.5-1.3 2.05-2.12-.75.33-1.54.55-2.36.64a4.13 4.13 0 0 0 1.8-2.27c-.8.48-1.68.82-2.6 1A4.1 4.1 0 0 0 9.85 5.9a11.65 11.65 0 0 1-8.46-4.29A4.1 4.1 0 0 0 2.66 7.1 4.1 4.1 0 0 1 .8 6.59v.05a4.1 4.1 0 0 0 3.3 4.02c-.6.17-1.24.2-1.85.07a4.11 4.11 0 0 0 3.83 2.85A8.23 8.23 0 0 1 0 15.28a11.64 11.64 0 0 0 6.3 1.85Z"/>
-            </svg>
-          </a>
-          <a class="hero__socials-link" href="">
-            <svg class="hero__socials-image"
-              width="20" height="18"
-              viewBox="0 0 20 18"
-              fill="none">
-              <path fill="currentColor" d="M6.3 17.13c7.54 0 11.67-6.26 11.67-11.68 0-.17 0-.35-.02-.53.8-.58 1.5-1.3 2.05-2.12-.75.33-1.54.55-2.36.64a4.13 4.13 0 0 0 1.8-2.27c-.8.48-1.68.82-2.6 1A4.1 4.1 0 0 0 9.85 5.9a11.65 11.65 0 0 1-8.46-4.29A4.1 4.1 0 0 0 2.66 7.1 4.1 4.1 0 0 1 .8 6.59v.05a4.1 4.1 0 0 0 3.3 4.02c-.6.17-1.24.2-1.85.07a4.11 4.11 0 0 0 3.83 2.85A8.23 8.23 0 0 1 0 15.28a11.64 11.64 0 0 0 6.3 1.85Z"/>
-            </svg>
-          </a>
-          <a class="hero__socials-link" href="">
-            <svg class="hero__socials-image"
-              width="20" height="18"
-              viewBox="0 0 20 18"
-              fill="none">
-              <path fill="currentColor" d="M6.3 17.13c7.54 0 11.67-6.26 11.67-11.68 0-.17 0-.35-.02-.53.8-.58 1.5-1.3 2.05-2.12-.75.33-1.54.55-2.36.64a4.13 4.13 0 0 0 1.8-2.27c-.8.48-1.68.82-2.6 1A4.1 4.1 0 0 0 9.85 5.9a11.65 11.65 0 0 1-8.46-4.29A4.1 4.1 0 0 0 2.66 7.1 4.1 4.1 0 0 1 .8 6.59v.05a4.1 4.1 0 0 0 3.3 4.02c-.6.17-1.24.2-1.85.07a4.11 4.11 0 0 0 3.83 2.85A8.23 8.23 0 0 1 0 15.28a11.64 11.64 0 0 0 6.3 1.85Z"/>
+              <path fill="currentColor" d="M7.24 8.39c-.57 0-1.02.5-1.02 1.11 0 .61.46 1.11 1.02 1.11.57 0 1.02-.5 1.02-1.11.01-.61-.45-1.11-1.02-1.11Zm3.65 0c-.57 0-1.02.5-1.02 1.11 0 .61.46 1.11 1.02 1.11.57 0 1.02-.5 1.02-1.11 0-.61-.45-1.11-1.02-1.11Z"/>
+              <path fill="currentColor" d="M15.75 0H2.35C1.22 0 .3.92.3 2.06v13.52c0 1.14.92 2.06 2.05 2.06h11.34l-.53-1.85 1.28 1.19 1.21 1.12L17.8 20V2.06C17.8.92 16.88 0 15.75 0Zm-3.86 13.06-.66-.81c1.31-.37 1.81-1.19 1.81-1.19-.41.27-.8.46-1.15.59a7 7 0 0 1-5.51-.01c-.23-.09-.48-.2-.73-.34l-.09-.05-.04-.03a3.5 3.5 0 0 1-.28-.17s.48.8 1.75 1.18l-.67.83c-2.21-.07-3.05-1.52-3.05-1.52a13.4 13.4 0 0 1 1.44-5.83c1.44-1.08 2.81-1.05 2.81-1.05l.1.12c-1.8.52-2.63 1.31-2.63 1.31s.22-.12.59-.29a7.51 7.51 0 0 1 2.27-.63l.17-.02a8.15 8.15 0 0 1 5.03.94s-.79-.75-2.49-1.27l.14-.16s1.37-.03 2.81 1.05c0 0 1.44 2.61 1.44 5.83 0 0-.85 1.45-3.06 1.52Z"/>
             </svg>
           </a>
         </address>
       </div>
-      <img src="assets/images/hero/hero@1.25x.png" alt="">
+      <picture class="hero__image-wrapper">
+        <!-- for DPR: 3 -->
+        <source srcset="assets/images/hero/hero.svg"
+          media="
+            only screen and (-o-min-device-pixel-ratio: 9/4),
+            only screen and (-webkit-min-device-pixel-ratio: 2.25),
+            only screen and (min-device-pixel-ratio: 2.25),
+            only screen and (min-resolution: 2.25dppx)
+        ">
+        <source type="image/avif" srcset="
+          assets/images/hero/hero@1.25x.avif 1x,
+          assets/images/hero/hero@2x.avif 2x
+        ">
+        <source type="image/webp" srcset=
+          "assets/images/hero/hero@1.25x.webp 1x,
+          assets/images/hero/hero@2x.webp 2x
+        ">
+        <source type="image/png" srcset="
+          assets/images/hero/hero@1.25x.png 1x,
+          assets/images/hero/hero@2x.png 2x
+        ">
+        <img class="hero__image"
+          src="assets/images/hero/hero@1.25x.png"
+          alt="мужчина с ноутбуком">
+      </picture>
     </div>
   </section>
   <section class="skills">
     <div class="skills__container container">
       <h2 class="title title_size_large">
         My
-        <span class="title_style_black">
+        <span class="title_style_bold">
           Skills
         </span>
       </h2>
@@ -135,7 +182,7 @@
     <div class="experience__container container">
       <h2 class="title title_size_large">
         My
-        <span class="title_style_black">
+        <span class="title_style_bold">
           Experience
         </span>
       </h2>
@@ -173,7 +220,7 @@
       <div class="about__text">
         <h2 class="title title_size_large">
           About
-          <span class="title_style_black">
+          <span class="title_style_bold">
             Me
           </span>
         </h2>
@@ -195,7 +242,7 @@
     <div class="projects__container container">
       <h2 class="title title_size_large">
         My
-        <span class="title_style_black">
+        <span class="title_style_bold">
           Projects
         </span>
       </h2>
@@ -228,7 +275,7 @@
     <div class="testimonial__container container">
       <h2 class="title title_size_large">
         My
-        <span class="title_style_black">
+        <span class="title_style_bold">
           Testimonial
         </span>
       </h2>
@@ -302,13 +349,19 @@
       </form>
       <div class="feedback__text">
         <h2 class="title title_size_large">
-          <span class="title_style_black">
+          <span class="title_style_bold">
             Let’s
           </span>
-          <span class="title_style_outline">
+          <div class="title_style_outline-wrapper">
             talk
-          </span>
-          <span class="title_style_black">
+            <svg class="title_style_outline"
+              viewBox="0 0 100 64">
+              <text x="0" y="48">
+                talk
+              </text>
+            </svg>
+          </div>
+          <span class="title_style_bold">
             for Something special
           </span>
         </h2>

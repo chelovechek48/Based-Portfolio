@@ -1,0 +1,34 @@
+@use '../vars/' as *;
+@use '../mixins/' as *;
+
+.button {
+  @include focus(
+    $offset: 0.5rem
+  );
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-weight: 500;
+  padding: 16px 20px;
+  border-radius: 4px;
+  
+  color: $white;
+  background-color: $black;
+
+  transition: 300ms ease;
+  &:hover {
+    background-color: $neutral;
+  }
+  &:active {
+    color: $black;
+    background-color: $white;
+    box-shadow: 0 0 0 3px $black inset;
+  }
+
+  &__image {
+    height: 1.2rem;
+  }
+}

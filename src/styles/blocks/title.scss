@@ -1,0 +1,36 @@
+@use '../vars/' as *;
+
+.title {
+  &_size {
+    &_large {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 400;
+      line-height: 1.5;
+    }
+  }
+
+  &_style {
+    &_bold {
+      font-weight: 800;
+    }
+    &_outline {
+      &-wrapper {
+        visibility: hidden;
+        position: relative;
+        display: inline-block;
+        font-weight: 800;
+      }
+      visibility: visible;
+      position: absolute;
+      top: 0.25rem;
+      left: 0;
+      
+      fill: $white;
+      stroke: $black;
+      stroke-width: 6px;
+      paint-order: stroke;
+
+      font-size: 3rem;
+    }
+  }
+}

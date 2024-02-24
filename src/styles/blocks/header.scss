@@ -1,0 +1,152 @@
+@use '../vars/' as *;
+
+.header {
+  color: $black;
+  background-color: transparent;
+
+  $header-padding-block: 1.5rem;
+  $logo-h: 2rem;
+  $header-h: calc($header-padding-block * 2 + $logo-h);
+
+  &__container {
+    z-index: 100;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: $header-padding-block;
+  }
+
+  &__logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &-image {
+      height: $logo-h;
+    }
+  }
+
+  &__menu {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    gap: 1.25rem clamp(1rem, 2.5vw, 2rem);
+  }
+
+  &__link {
+    transition: 200ms ease;
+    position: relative;
+    display: inline-flex;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 3px;
+      background-color: $black;
+      top: calc(100% - 1rem);
+      left: 1rem;
+      transition: 200ms ease;
+    }
+    &:hover {
+      color: $neutral;
+      &::before {
+        width: calc(100% - 2rem);
+        background-color: $neutral;
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    &__menu {
+      z-index: -1;
+      position: absolute;
+      left: 0;
+      transform: translateY(calc(-100% - $header-h));
+      width: 100%;
+      min-height: 100%;
+      
+      flex-direction: column;
+      box-shadow: 0 calc(0px - $header-h) 0 0 $gray-300;
+      padding: $header-h 1rem 1rem;
+      
+      font-size: 1.5rem;
+      font-size: clamp(1rem, 9vw, 1.5rem);
+      background-color: $gray-300;
+    }
+    &__download {
+      z-index: -1;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) translateY(calc(-100% - $header-h));
+    }
+
+    &__menu,
+    &__download {
+      top: 100%;
+
+      opacity: 0;
+      visibility: hidden;
+      transition: 300ms ease;
+    }
+    &.open &__menu,
+    &.open &__download {
+      opacity: 1;
+      visibility: visible;
+    }
+    &.open &__menu {
+      transform: translateY(0);
+    }
+    &.open &__download {
+      transform: translateX(-50%) translateY(0);
+    }
+
+  }
+
+  &__burger {
+    @media (min-width: calc($mobile + 1px)) {
+      display: none;
+    }
+    @media (max-width: $mobile) {
+      min-width: 2rem;
+      background-color: transparent;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.5rem;
+
+      &-item {
+        transition: 300ms ease;
+        width: 100%;
+        height: 4px;
+        border-radius: 4px;
+        background-color: $black;
+      }
+    }
+  }
+  &.open &__burger {
+    @media (max-width: $mobile) {
+      &-item {
+        &:first-child {
+          transform: translateY(calc(0.5rem + 4px)) rotate(45deg);
+          transform-origin: center;
+        }
+        &:last-child {
+          transform: translateY(calc(0px - (0.5rem + 4px))) rotate(-45deg);
+          transform-origin: center;
+        }
+        &:nth-child(2) {
+          opacity: 0;
+          width: 0;
+        }
+      }
+    }
+  }
+}

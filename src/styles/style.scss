@@ -2,6 +2,7 @@
 @forward 'fonts';
 @forward 'blocks';
 @use 'vars' as *;
+@use 'mixins' as *;
 
 html {
   scroll-behavior: smooth;
@@ -14,4 +15,13 @@ html {
   padding-right: $padding-container;
   margin-left: auto;
   margin-right: auto;
+}
+
+.clickable {
+  padding: 1rem;
+  margin: -1rem;
+  box-sizing: content-box;
+  @include focus(
+    $offset: -0.5rem
+  );
 }
