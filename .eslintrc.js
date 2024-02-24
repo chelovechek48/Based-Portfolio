@@ -14,12 +14,11 @@ module.exports = {
     'no-unused-vars': 'error',
     'linebreak-style': 'off',
     'import/extensions': 'off',
-    'import/no-extraneous-dependencies': ['error', { devDependencies: ['*.config.*js'] }],
   },
   settings: {
     'import/resolver': {
       webpack: {
-        config: 'webpack.config.js',
+        config: 'webpack.config.dev.js',
       },
     },
   },
