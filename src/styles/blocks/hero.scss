@@ -53,6 +53,10 @@
     &-image {
       width: 1.75rem;
       height: 1.75rem;
+      transition: transform 300ms ease;
+    }
+    &-link:hover &-image {
+      transform: scale(1.35);
     }
   }
 
