@@ -1,0 +1,59 @@
+@use '../vars/' as *;
+@use '../mixins/' as *;
+
+.experience {
+  color: $white;
+  background-color: $black;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  &__item {
+    max-width: 65rem;
+    background-color: $gray-800;
+    padding: clamp(1.25rem, 3vw, 2rem) clamp(1.25rem, 3vw, 1.5rem);
+    border-radius: 10px;
+
+    &-header {
+      display: flex;
+      align-items: center;
+      gap: clamp(1rem, 5vw, 1.5rem);
+      flex-wrap: wrap;
+      margin-bottom: clamp(1rem, 5vw, 1.5rem);
+    }
+
+    &-title {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-right: auto;
+
+      transition: 200ms ease;
+      &:hover {
+        color: $blue;
+      }
+      @include focus(
+        $offset: 0.5rem
+      );
+    }
+
+    &-image {
+      min-width: 2rem;
+      max-height: 2rem;
+      transition: 300ms ease;
+    }
+    &-title:hover &-image {
+      transform: scale(1.2);
+    }
+    
+    &-time {
+      color: $gray-300;
+      font-size: 1.125rem;
+      font-weight: 500;
+    }
+  }
+}
