@@ -7,7 +7,7 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: clamp(1.5rem, 5vw, 4rem);
+    gap: clamp(3rem, 5vw, 4rem);
     counter-reset: count;
   }
 
