@@ -1,0 +1,67 @@
+@use '../vars/' as *;
+
+.projects {
+  color: $white;
+  background-color: $black;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 5vw, 4rem);
+    counter-reset: count;
+  }
+
+  &__item {
+    display: flex;
+    align-items: stretch;
+    gap: clamp(1.5rem, 5vw, 4rem);
+
+    @media (min-width: calc($mobile + 1px)) {
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      flex-wrap: wrap;
+      justify-content: center;
+      &-image-wrapper, &-text {
+        max-width: 28rem;
+      }
+    }
+
+    &-link {
+      width: 2rem;
+      display: flex;
+      transition: 200ms ease;
+      &:hover {
+        transform: scale(1.25);
+      }
+    }
+
+    &-image {
+      &-wrapper {
+        flex: 0 1 35rem;
+      }
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top left;
+      border-radius: 20px;
+    }
+    &-text {
+      flex: 1 0 min(100%, 22rem);
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: clamp(1rem, 2vw, 1.75rem);
+      &::before {
+        content: counter(count, decimal-leading-zero);
+        counter-increment: count;
+
+        font-size: clamp(1.5rem, 3vw, 3rem);
+        font-weight: 800;
+      }
+    }
+  }
+}

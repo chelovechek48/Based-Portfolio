@@ -409,8 +409,8 @@
     </div>
   </section>
   <section class="projects">
-    <div class="projects__container container">
-      <h2 class="title title_size_large">
+    <div class="container container_section">
+      <h2 class="title title_size_large title_section">
         My
         <span class="title_style_bold">
           Projects
@@ -418,9 +418,23 @@
       </h2>
       <ul class="projects__list">
         <li class="projects__item">
-          <img class="projects__item-image"
-            src="assets/images/projects/blog-template@1.25x.png"
-            alt="">
+          <picture class="projects__item-image-wrapper">
+            <source type="image/avif" srcset="
+              assets/images/projects/blog-template@1.25x.avif 1x,
+              assets/images/projects/blog-template@2x.avif 2x
+            ">
+            <source type="image/webp" srcset="
+              assets/images/projects/blog-template@1.25x.webp 1x,
+              assets/images/projects/blog-template@2x.webp 2x
+            ">
+            <source type="image/png" srcset="
+              assets/images/projects/blog-template@1.25x.png 1x,
+              assets/images/projects/blog-template@2x.png 2x
+            ">
+            <img class="projects__item-image"
+              src="assets/images/projects/blog-template@1.25x.png"
+              alt="примеры сайтов на тему: Crypto Screener">
+          </picture>
           <div class="projects__item-text">
             <h3 class="title title_size_small">
               Crypto Screener Application
@@ -428,16 +442,81 @@
             <p class="paragraph paragraph_color_gray-500">
               I'm Evren Shah Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to specimen book.
             </p>
-            <a class="projects__item-link" href="">
-              <svg class="projects__item-image"
-                width="20" height="20"
+            <a class="projects__item-link clickable" href="">
+              <svg class="projects__item-icon"
+                width="100%"
                 viewBox="0 0 20 20"
                 fill="none">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10.83 9.17 6.84-6.84M18.33 5.67v-4h-4M9.17 1.67H7.5c-4.17 0-5.83 1.66-5.83 5.83v5c0 4.17 1.66 5.83 5.83 5.83h5c4.17 0 5.83-1.66 5.83-5.83v-1.67"/>
               </svg>
             </a>
           </div>
-        </article>
+        </li>
+        <li class="projects__item">
+          <picture class="projects__item-image-wrapper">
+            <source type="image/webp" srcset="
+              assets/images/projects/euphoria-ecommerce-template@1.25x.webp 1x,
+              assets/images/projects/euphoria-ecommerce-template@2x.webp 2x
+            ">
+            <source type="image/png" srcset="
+              assets/images/projects/euphoria-ecommerce-template@1.25x.png 1x,
+              assets/images/projects/euphoria-ecommerce-template@2x.png 2x
+            ">
+            <img class="projects__item-image"
+              src="assets/images/projects/euphoria-ecommerce-template@1.25x.png"
+              alt="примеры сайтов на тему: Электронная коммерция">
+          </picture>
+          <div class="projects__item-text">
+            <h3 class="title title_size_small">
+              Euphoria - Ecommerce (Apparels) Website Template
+            </h3>
+            <p class="paragraph paragraph_color_gray-500">
+              I'm Evren Shah Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to specimen book. when an unknown printer took a galley of type and scrambled it to specimen book.</p>
+            <a class="projects__item-link clickable" href="">
+              <svg class="projects__item-icon"
+                width="100%"
+                viewBox="0 0 20 20"
+                fill="none">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10.83 9.17 6.84-6.84M18.33 5.67v-4h-4M9.17 1.67H7.5c-4.17 0-5.83 1.66-5.83 5.83v5c0 4.17 1.66 5.83 5.83 5.83h5c4.17 0 5.83-1.66 5.83-5.83v-1.67"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="projects__item">
+          <picture class="projects__item-image-wrapper">
+            <source type="image/avif" srcset="
+              assets/images/projects/crypto-screener-app@1.25x.avif 1x,
+              assets/images/projects/crypto-screener-app@2x.avif 2x,
+            ">
+            <source type="image/webp" srcset="
+              assets/images/projects/crypto-screener-app@1.25x.webp 1x,
+              assets/images/projects/crypto-screener-app@2x.webp 2x
+            ">
+            <source type="image/png" srcset="
+              assets/images/projects/crypto-screener-app@1.25x.png 1x,
+              assets/images/projects/crypto-screener-app@2x.png 2x
+            ">
+            <img class="projects__item-image"
+              src="assets/images/projects/crypto-screener-app@1.25x.png"
+              alt="примеры сайтов на тему блогов">
+          </picture>
+          <div class="projects__item-text">
+            <h3 class="title title_size_small">
+              Blog Website Template
+            </h3>
+            <p class="paragraph paragraph_color_gray-500">
+              I'm Evren Shah Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to specimen book.
+            </p>
+            <a class="projects__item-link clickable" href="">
+              <svg class="projects__item-icon"
+                width="100%"
+                viewBox="0 0 20 20"
+                fill="none">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10.83 9.17 6.84-6.84M18.33 5.67v-4h-4M9.17 1.67H7.5c-4.17 0-5.83 1.66-5.83 5.83v5c0 4.17 1.66 5.83 5.83 5.83h5c4.17 0 5.83-1.66 5.83-5.83v-1.67"/>
+              </svg>
+            </a>
+          </div>
+        </li>
       </ul>
     </div>
   </section>
