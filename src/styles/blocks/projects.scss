@@ -23,7 +23,7 @@
     }
 
     @media (max-width: $mobile) {
-      flex-wrap: wrap;
+      flex-wrap: wrap-reverse;
       justify-content: center;
       &-image-wrapper, &-text {
         max-width: 28rem;
