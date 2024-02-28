@@ -31,23 +31,32 @@
     }
 
     &-link {
-      width: 2rem;
+      font-size: 1.25rem;
       display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    &-icon {
       transition: 200ms ease;
-      &:hover {
-        transform: scale(1.25);
-      }
+      width: 2rem;
+    }
+    &-link:hover &-icon {
+      transform: scale(1.25);
     }
 
     &-image {
       &-wrapper {
         flex: 0 1 35rem;
+        @media (max-width: $mobile-small) {
+          margin-inline: -1rem;
+        }
       }
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: top left;
-      border-radius: 20px;
+      border-radius: 12px;
     }
     &-text {
       flex: 1 0 min(100%, 22rem);

@@ -1,6 +1,8 @@
 @use '../vars/' as *;
 
 .title {
+  word-break: break-word;
+  
   &_size {
     &_small {
       font-size: 24px;

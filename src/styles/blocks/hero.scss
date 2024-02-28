@@ -28,6 +28,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: clamp(1.5rem, 5vw, 2rem);
+
     &-link {
       aspect-ratio: 1;
       display: grid;
@@ -39,7 +40,6 @@
       
       color: $black;
       background-color: $white;
-      transition: 200ms ease;
       
       &:hover {
         color: $white;
@@ -51,12 +51,18 @@
     }
 
     &-image {
-      width: 1.75rem;
-      height: 1.75rem;
+      width: 2rem;
+      height: 2rem;
       transition: transform 300ms ease;
     }
     &-link:hover &-image {
-      transform: scale(1.35);
+      transform: scale(1.25);
+    }
+    &-link:hover &-detail {
+      fill: $black;
+    }
+    &-link, &-detail {
+      transition: 200ms ease;
     }
   }
 
@@ -82,4 +88,6 @@
       margin-left: -15vw;
     }
   }
+
+  
 }

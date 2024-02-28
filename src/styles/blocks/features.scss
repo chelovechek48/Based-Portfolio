@@ -1,7 +1,7 @@
 @use '../vars/' as *;
 @use '../mixins/' as *;
 
-.experience {
+.features {
   color: $white;
   background-color: $black;
 
@@ -50,7 +50,7 @@
       transform: scale(1.2);
     }
     
-    &-time {
+    &-type {
       color: $gray-300;
       font-size: 1.125rem;
       font-weight: 500;
